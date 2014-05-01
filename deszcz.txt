@@ -897,7 +897,7 @@ Freja ponownie kiwnê³a g³ow¹ na znak zgody i odda³a Sulimowi zwiniêt¹ mapê. Co p
 
 ***
 
-Sulim wpatrywa³ siê w skacz¹ce p³omienie ogniska, zastawiaj¹c siê czy spotka³ siê w ¿yciu z wiêkszym antytalent. Œpiewaczki z niej nie zrobi, nie oszuka³aby nawet ca³kowitego ignoranta.
+	Sulim wpatrywa³ siê w skacz¹ce p³omienie ogniska, zastawiaj¹c siê czy spotka³ siê w ¿yciu z wiêkszym antytalent. Œpiewaczki z niej nie zrobi, nie oszuka³aby nawet ca³kowitego ignoranta.
 - To mo¿e siostra? - zapyta³a cicho Freja - Siostra brzmi sensownie, ka¿dy mo¿e podró¿owaæ ze swoj¹ siostr¹.
 Co ciekawe problemem nie by³ tu jej g³os. Nie by³ on specjalnie z³y, mo¿e nie specjalnie barwny, ale o przyjemnym i ciep³ym brzmieniu. W mowie potrafi³a siê nim pos³ugiwaæ po mistrzowsku. NajwyraŸniej nie ka¿demu dane by³o w ¿yciu œpiewaæ.
 - Obawiam siê, ¿e ludzie w wiosce mog¹ siê krzywo na nas patrzeæ - opowiedzia³ - m³ode kobiety nie wêdruj¹ losowo po œwiecie ze sowim rodzeñstwem - spojrza³ na ni¹, przygl¹daj¹c siê jej mêskim ubraniom - ale chyba nic lepszego nie wymyœlimy. Samotny bard podró¿uj¹cy ze swoj¹ siostr¹-³uczniczk¹ - uœmiechn¹³ siê grzebi¹c patykiem w ogniu - trudno to wypowiedzieæ zachowuj¹c powagê.
@@ -913,7 +913,7 @@ Bez s³owa Sulim chwyci³ swoj¹ lutnie. Barwne nuty powoli rozesz³y siê w nocnym p
 
 ***
 
-Mauricio powoli zszed³ z konia i rozprostowa³ obola³e po d³ugiej jeŸdzie koñczyny. Spojrza³ na groŸnie uniesione miecze swoich stra¿ników, po czym na dwie postacie siedz¹ce na zatrzymanym wozie. Mê¿czyznê widzia³ po raz pierwszy. Nie wydawa³ siê on byæ specjalnie przejêty zaistnia³¹ sytuacj¹. Uœmiecha³ siê nawet przyjaŸnie. Inkwizytor przeniós³ wzrok na siedz¹c¹ obok œmiertelnie przera¿on¹ dziewczynê. Choæ zafarbowa³o i œciê³a krótko w³osy, to na niewiele jej siê to zda³o. Mauricio za czêsto zmuszany by³ chodziæ do baronowej by nie poznaæ jej rodzonej córki.
+	Mauricio powoli zszed³ z konia i rozprostowa³ obola³e po d³ugiej jeŸdzie koñczyny. Spojrza³ na groŸnie uniesione miecze swoich stra¿ników, po czym na dwie postacie siedz¹ce na zatrzymanym wozie. Mê¿czyznê widzia³ po raz pierwszy. Nie wydawa³ siê on byæ specjalnie przejêty zaistnia³¹ sytuacj¹. Uœmiecha³ siê nawet przyjaŸnie. Inkwizytor przeniós³ wzrok na siedz¹c¹ obok œmiertelnie przera¿on¹ dziewczynê. Choæ zafarbowa³o i œciê³a krótko w³osy, to na niewiele jej siê to zda³o. Mauricio za czêsto zmuszany by³ chodziæ do baronowej by nie poznaæ jej rodzonej córki.
 - Leokadio, s³oñce - powiedzia³ spokojnie - oraz doktorze Mordekai, jak mniemam, powiedzcie mi proszê gdzie jest wasza towarzyska, wiedŸma.
 - Witam Wasz¹ Ekscelencje Wielkiego Królewskiego Inkwizytora. - odpar³ grzecznie lekarz - Pok³oni³bym siê nisko siê by oddaæ swój szacunek, ale nie chcia³bym zbêdnymi ruchami denerwowaæ mi³ych panów z mieczami.
 Mauricio kiwn¹³ lekko palcem w stronê Szproty i przygl¹dn¹³ siê jak m³odszy sier¿ant si³¹ œci¹ga lekarza z wozu i bezceremonialne wbija mu piêœæ w brzuch. Mordekai zgi¹³ siê w pól uderzaj¹c kolanami o ziemie.
@@ -952,10 +952,45 @@ I w ten sposób szybciej odzyskamy ksi¹¿kê, doda³ w myœlach.
 
 ***
 
-Siedzieli w ciszy na ci¹gle stoj¹cym w ciszy wozie.
-- ¯yjemy - stwierdzi³ po chwili Mordekai, trzymaj¹c rêkê na ci¹gle bol¹cym brzuchu - œmiem twierdziæ, ¿e mieliœmy sporo szczêœcia.
-- Wyda³eœ im Freje! - zap³aka³a wstrz¹œniêta Leokadia - Wyda³eœ j¹ inkwizycji, jakbyœ opowiada³ im o kartoflach! Nie skrzywi³eœ siê nawet przy tym!
+	Siedzieli w ciszy na ci¹gle stoj¹cym w miejscu wozie.
+- A wiêc, ¿yjemy - stwierdzi³ po chwili Mordekai, trzymaj¹c rêkê brzuchu - nazwa³bym to pewnym sukcesem.
+- Wyda³eœ im Freje! - zap³aka³a wstrz¹œniêta Leokadia - Wyda³eœ j¹ inkwizycji i zrobi³eœ to jakbyœ opowiada³ im o kartoflach! Nie skrzywi³eœ siê nawet przy tym!
 Lekarz spojrza³ na Leokadie. By³a przestraszona, wœciek³a i jednoczeœnie szczêœliwa, ¿e ci¹gle ¿y³a.
-- O Freje siê nie martw, poradzi sobie. - powiedzia³ spokojnie - Bardziej martwi mnie fakt, ¿e wyda³em im swojego jedynego przyjaciela. £adnie odp³aci³em mu za ca³¹ otrzyman¹ od niego pomoc. Coœ czujê, ¿e bêdzie mnie to przeœladowa³o do koñca ¿ycia. - Odwróci³ o dziewczyny wzrok i spojrza³ przed siebie - Niestety jak chcieliœmy prze¿yæ to nie mog³em sk³amaæ. Co by o Mauricio nie mówiæ, nie zosta³by tym kim jest, gdyby nie mia³ talentu. Przed takimi ludŸmi siê nie k³amie - z³apa³ Lejce i pogoni³ konia.
+- O Freje siê nie martw, poradzi sobie. - powiedzia³ spokojnie - Bardziej martwi mnie fakt, ¿e wyda³em im swojego jedynego przyjaciela. £adnie odp³aci³em mu za ca³¹ otrzyman¹ od niego pomoc. Coœ czujê, ¿e bêdzie mnie to przeœladowa³o do koñca ¿ycia. - Odwróci³ o dziewczyny wzrok i spojrza³ przed siebie - Niestety jak chcieliœmy prze¿yæ to nie mog³em sk³amaæ. Co by o Mauricio nie mówiæ, nie zosta³by tym, kim jest, gdyby by³ idiot¹. Przed takimi ludŸmi siê nie k³amie - z³apa³ lejce i pogoni³ konia.
+
+***
+
+	Wioska sk³ada³a siê dwunastu gospodarstw i karczmy. Weszli do niej wieczorem, w porozrzucanych doœæ daleko od siebie budynkach pali³y siê ju¿ œwiat³a. O tej porze jedynymi ludŸmi na zewn¹trz by³a dwójka bawi¹cych siê przy drodze dzieci, te jednak poch³oniête zabaw¹ nie zwróci³y na nich uwagi. Zostawili konia przed drzwiami karczmy i stanêli razem przed drzwiami.
+- Gotowa? - zapyta³ Sulim wyci¹gaj¹c rêkê w stronê klamki.
+Kiwnê³a g³ow¹ i przekroczyli próg. W ma³y pomieszczeniu przebywa³a trójka czerwonych ju¿ na twarzy mê¿czyzn siedz¹cych przy pustych kuflach. Zmêczeni i podpici têpo wpatrywali siê w sufit.
+- Wczoraj pad³a mi muæka ma stara - wymamrota³ jeden z nich - takie mleko dobre dawa³a...
+- Wiemy, mówisz nam to ju¿ dziesi¹ty raz - powiedzia³ inny.
+- Ale nadal mi smutno...
+Sulim z Frej¹ podeszli po cichu do lady i po chwili wynurzy³ siê z pod niej brodaty karczmarz. Spojrza³ wymownie na przybyszy, daj¹c im do zrozumienia, ¿e ich nie zna.
+- Podró¿owaliœmy razem do miasta - zacz¹³ Sulim - ale moja siostra nagle Ÿle siê poczu³a.
+Karczmarz powoli przeniós³ wzrok z muzyka na Freje. WyraŸnie podkr¹¿one oczy i blada jak kreda skóra nie pozostawia³y ¿adnych z³udzeñ.
+- Zboczyliœmy wiêc z trasy by wydobrza³a - konstytuowa³ - chcieliœmy wynaj¹æ pokój na czas póki nie poczujê siê lepiej.
+Jeden z goœci karczmy, s³ysz¹c rozmowê, odwróci³ g³owê w stronê przybyszy. Ujrza³ uzbrojon¹ w ³uk upiorzyce. Przygl¹dn¹³ siê bia³ej jak koœæ twarzy i opadaj¹cym czarnym w³osem po czym zerwa³ siê z krzes³a.
+- Nie wystarczy ci ma krowa, demonie? - krzykn¹³ maniakalnie, po czym wybieg³ na zewn¹trz, potr¹caj¹c po drodze dwa krzes³a.
+Przez d³u¿¹ chwilê nikt siê nie odezwa³. W koñcu karczmarz westchn¹³ cicho i zwróci³ siê do Sulima.
+- Twoja siostra straszy mi klientów - powiedzia³ - nie mam pokojów do wynajêcia, po co mia³bym mieæ pokoje do wynajêcia? Nie prowadzê gospody. Mogê sprzedaæ wam za to piwo.
+Freja nie musia³a nawet siê siliæ na udawanie czegokolwiek. Bez tego wygl¹da³a jak chodz¹ce niewszczêcie. Wystarczy³o, ¿e karczmarz ponownie siê jej przygl¹dn¹³.
+- No dobrze, mam jeden nieu¿ywany pokój. Macie czym zap³aciæ? - zapyta³.
+Sulim wyj¹³ specjalnie przygotowany na t¹ okazje sk¹py mieszek i wyci¹gn¹³ z niego siedem miedziaków.
+- Zap³acimy jeszcze raz tyle jak dostaniemy coœ do jedzenia i ciep³¹ k¹piel - powiedzia³ Sulim k³ad¹c monety na stole.
+- I miejsce w stajni dla naszego konia - doda³a cicho Freja.
+Karczmarz skrzywi³ siê patrz¹c na le¿¹ce przed nim pieni¹dze. Nie by³o to specjalnie du¿o, ale wiêcej siê nie spodziewa³. Przygl¹dn¹³ siê ponownie przybyszom i zauwa¿y³ przyczepion¹ do pasa Sulima  lutniê.
+- Jesteœcie muzykami? - zapyta³.
+- Tylko brat - odpar³a Freja.
+£ama³ siê jeszcze chwilê po czym w koñcu podj¹³ decyzje.
+- Niech wam bêdzie. Usi¹dŸcie gdzieœ ja pójdê spleœæ wam jakiœ ciep³y posi³ek.
+Przyszywane rodzeñstwo wybra³o sobie jeden z dwóch wolnych stolików. Freja natychmiast po³o¿y³a g³owê policzkiem na stolê.
+- Umieram - wydusi³a z siebie.
+Sulim westchn¹³ nie wiedz¹c jak jej pomóc. Je¿eli porz¹dny posi³ek, ciep³a k¹piel i miêkkie ³ó¿ko nic nie dadz¹ to pozostania im szukanie jakiegoœ wiejskiego znachora.
+- Nie naprawdê, umieram - kontynuowa³a - ten stó³ strasznie œmierdzi.
+
+***
+
+	Co by nie mówiæ, k¹piel by³a cudowna. Choæ beczka by³a ma³a i niewygodna, to nie przeszkadza³o to Freji w rozkoszowaniu siê ciep³a wod¹. W koñcu z ubolewaniem wysz³a na zewn¹trz i stanê³a na ch³odniej trawie. Wytar³a do sucha rozgrzane cia³o i za³o¿y³a na nie po¿yczone od karczmarza czyste ubrania. Nie do koñca na ni¹ pasowa³y ale œrednio siê tym przejmowa³a, w koñcu ostanie dni prze¿y³a chodz¹c w ubraniach w³asnorêcznie zabitego cz³owieka. Wysz³a zza prowizorycznego parawanu i wesz³a do karczmy przez tylne drzwi. W œrodku znajdowa³ siê ma³y pokoik z przygotowanym dla niej wy³o¿onym sianem pos³aniem. Nie do koñca by³o to obiecane miêkkie ³ózko, ale nie mo¿na by³o mieæ przecie¿ wszystkiego. Spojrza³a na le¿¹cego w odsuniêtym na przyzwoit¹ odleg³oœæ pos³aniu Sulima. Ju¿ spa³. Nie chc¹c go budziæ bezg³oœnie u³o¿y³a siê na swoim. Przykry³a siê bawe³nianym kocem i zamknê³a oczy. Tej nocy zamierza³a spaæ.
 
 ***
