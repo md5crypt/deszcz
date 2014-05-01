@@ -28,7 +28,8 @@
 <?php
 $a = file_get_contents('https://raw.github.com/md5crypt/deszcz/master/deszcz.txt');
 $a = iconv('Windows-1250','UTF-8',$a);
-$a = str_replace(array("\r","\n",'–',"\t"),array('','<br/>','-','&nbsp;&nbsp;&nbsp;&nbsp;'),$a);
+$a = preg_replace('/ (.) /',' \1&nbsp;',$a);
+$a = str_replace(["\r","\n",'–',"\t"],['','<br/>','-','&nbsp;&nbsp;&nbsp;&nbsp;'],$a);
 $a = str_replace('<br/>***<br/>','<br/><center><img src="para.png"/></center>',$a);
 $a = str_replace('<br/>---<br/>','<hr/>',$a);
 $pos = 0;
