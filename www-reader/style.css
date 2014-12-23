@@ -1,0 +1,102 @@
+body{
+	background-color: #F0F0F0;
+	font-family: Georgia;
+	font-size: 16px;
+	color: #222000;
+}
+#banner{
+	background-color: inherit;
+	width: 100%;
+	text-align:center;
+	position: fixed;
+	top: 0;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #222000;
+}
+#text{
+	margin: 0 auto;
+	line-height: 140%;
+	max-width: 42em;
+}
+.line{
+	text-indent: 1.5em;
+	margin: 0px;
+	text-align:justify;
+}
+.footnote{
+	text-indent: 0em;
+	font-size: 0.75em;
+	font-style: italic;
+}
+.quote{
+	font-style: italic;
+}
+.section{
+	background-image: url("assets/para.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	height: 2em;
+}
+.chapter{
+	margin-top: 4em;
+	text-align: center;
+}
+.chapter img{
+	vertical-align: middle;
+	width: 8em;
+	max-width: 20%;
+}
+.chapter span{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.8em;
+}
+.chapter-div{
+	display: none;
+}
+.next-chapter{
+	width: 100%;
+	color: inherit;
+	text-align: right;
+	font-weight: bold;
+	margin-top: 1em;
+	display: block;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+#banner{
+	font-size: 16px;
+}
+#banner select{
+	color: inherit;
+}
+#a_less{
+	font-size: 0.75em;
+}
+#a_more{
+	font-size: 1.25em;
+}
+#a_invr{
+	color: #DCDCCC;
+	background-color: #3F3F3F;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+#a_chap{
+	background-color: inherit;
+	border: none;
+	font: inherit;
+}
+#a_perc{
+	display: inline-block;
+	width: 3em;
+	text-align: center;
+}
+#ldr{
+	width: 100%;
+	margin-top: 32px;
+	text-align: center;
+}
