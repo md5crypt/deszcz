@@ -56,7 +56,7 @@ HER;
 }
 
 echo "fetching source text...<br/>";
-$a = file_get_contents('https://raw.github.com/md5crypt/deszcz/master/deszcz.txt');
+$a = file_get_contents('https://raw.github.com/md5crypt/deszcz/master/deszcz.html');
 $a = iconv('Windows-1250','UTF-8',$a);
 $a = str_replace(array("\r","\n",'–',"\t"),array('','<br/>','-','&nbsp;&nbsp;&nbsp;&nbsp;'),$a);
 $a = str_replace('<br/>***<br/>','<div><img src="para.png"/></div>',$a);

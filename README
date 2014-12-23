@@ -1,18 +1,21 @@
+*Dec 23, 2014*
 new JS-heavy web reader: https://rawgit.com/md5crypt/deszcz/master/www-reader/index.html
-- it saves users preferences and text position in cookies
+- it saves users preferences and current position
 - it looks good on mobile devices
-it's content is fetched directly from github, so it's always up to date.
+- content fetched directly from github
+- uses Hyphenator JS lib to make text pretty
+- also includes a JS Windows-1250 charpage to UTF-8 convertor
 
-The story content is inside deszcz.html. It's a plain text file, named html to make rawgit happy, as txt files ale blacklisted for some reason.
-I used some minimal markup inside the text file:
+The story content is inside deszcz.html. It's a plain text file, named html to make rawgit happy, as txt files ale blacklisted for some reason. I used some minimal markup inside the text file:
 - /^!chapter\s+(.+)$/ for marking chapters
 - /!line/ for marking forced line breaks
 - /$***^/ for marking paragraph endings
 - /([^\s]+)\s*\[([^\]]+)\]/ for marking a footnote $2 for word $1 ( i.e. "word [footnote text]" )
 
-added latex output generator, but who would care for a latex template for polish-formatted novels... the output looks pretty much like the www-version, A5-booklet
+also added latex output generator, but who would care for a latex template for polish-formatted novels... the output looks pretty much like the www-version, A5-booklet
 
-added epub format generator! http://io.badgerland.eu/epub/ *currently probably broken*
+*Feb 25, 2014*
+added epub format generator! http://io.badgerland.eu/epub/
 
 if u somehow read it, remember to leave some feedback. Do it by reporting some issues, technically we can call them bugs in the linguistics.
 
