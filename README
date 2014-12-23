@@ -1,7 +1,16 @@
-here is the story in a human-friendly format: http://io.badgerland.eu/story.php
-it's generated on-the-fly so it's always up to date.
+new JS-heavy web reader: https://rawgit.com/md5crypt/deszcz/master/www-reader/index.html
+- it saves users preferences and text position in cookies
+- it looks good on mobile devices
+it's content is fetched directly from github, so it's always up to date.
 
-added epub format generator! http://io.badgerland.eu/epub/
+The story content is inside deszcz.html. It's a plain text file, named html to make rawgit happy, as txt files ale blacklisted for some reason.
+I used some minimal markup inside the text file:
+- /^!chapter\s+(.+)$/ for marking chapters
+- /!line/ for marking forced line breaks
+- /$***^/ for marking paragraph endings
+- /([^\s]+)\s*\[([^\]]+)\]/ for marking a footnote $2 for word $1 ( i.e. "word [footnote text]" )
+
+added epub format generator! http://io.badgerland.eu/epub/ *currently probably broken*
 
 if u somehow read it, remember to leave some feedback. Do it by reporting some issues, technically we can call them bugs in the linguistics.
 
