@@ -8,6 +8,7 @@ $(function(){
 	$.ajax({url:"../deszcz.html",dataType: "binary", processData: false, responseType:"arraybuffer"}).done(function(buffer){
 		$('#ldr').html('Transcodeing content...');
 		$.cookie.json = true;
+		$.cookie.defaults.expires = 365;
 		var config_tmp = $.cookie('reader-config');
 		if(typeof config_tmp == "object" && Object.keys(config_tmp).length == 5){
 			config = config_tmp;
