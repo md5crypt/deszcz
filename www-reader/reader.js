@@ -5,7 +5,7 @@
 
 var config = {fontsize:16, chapter:0, position:0, invert:false, viewFull:false};
 $(function(){
-	$.ajax({url:"../deszcz.txt",dataType: "binary", processData: false, responseType:"arraybuffer"}).done(function(buffer){
+	$.ajax({url:"../deszcz.html",dataType: "binary", processData: false, responseType:"arraybuffer"}).done(function(buffer){
 		$('#ldr').html('Transcodeing content...');
 		$.cookie.json = true;
 		var config_tmp = $.cookie('reader-config');
