@@ -1,0 +1,59 @@
+\documentclass[9pt,openany,titlepage]{extbook}
+
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{titleref}
+\usepackage{geometry}
+
+\makeatletter
+\newcommand*{\currentname}{\TR@currentTitle}
+\newcommand*{\makespacer}{
+	\vspace{3mm}
+	\centerline{
+		\includegraphics[width=0.2\textwidth]{para.pdf}
+	}
+	\vspace{3mm}
+}
+\makeatother
+
+\titleformat{\chapter}[block]{}{}{0.0ex}{
+	\centering
+	\includegraphics[width=0.2\textwidth]{chaptR.pdf}
+	\bfseries\Huge\itshape
+	\raisebox{10mm}{\currentname}
+	\includegraphics[width=0.2\textwidth]{chaptL.pdf}
+	\nullfont
+}[]
+
+\geometry{a5paper,left=18mm,right=12mm,top=18mm,bottom=8mm,}
+\setlength{\headheight}{15.2pt}
+\setlength{\headsep}{10pt}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[LE,RO]{\thepage}
+}
+
+\pagestyle{plain}
+
+\begin{document}
+	%title page form google's "latex title page" first hit
+	\begin{titlepage}
+		\centering
+		\vspace*{\baselineskip}
+		\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+		\rule{\textwidth}{0.4pt}\\[\baselineskip]{
+			\LARGE DESZCZ \\[0.3\baselineskip] ---EARLY DRAFT---
+		}\\[0.2\baselineskip]
+		\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+		\rule{\textwidth}{1.6pt}\\[\baselineskip]
+		\scshape
+		Nieskończone opowiadanie pełne błędów językowych, ortograficznych, \\
+		interpunkcyjnych oraz stylistycznych. \\[\baselineskip] 
+		\vspace*{2\baselineskip}
+		\vfill{\scshape Wrocław, 2014} \\[0.3\baselineskip]
+	\end{titlepage}
