@@ -1,5 +1,7 @@
+Hello there! You can read the story here: https://rawgit.com/md5crypt/deszcz/master/www-reader/index.html
+
 *Dec 23, 2014*
-new JS-heavy web reader: https://rawgit.com/md5crypt/deszcz/master/www-reader/index.html
+new JS-heavy web reader
 - it saves users preferences and current position
 - it looks good on mobile devices
 - content fetched directly from github
