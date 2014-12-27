@@ -34,7 +34,7 @@ $(function(){
 		story = story.replace(/!chapter\s+(.+)/g,"</div><div class=\"chapter-div\"><p class=\"chapter\" data-name=\"$1\" ></p>");
 		story = story.replace(/!line/g,"<br/>");
 		story = story.replace(/\n([^<].+)/g,"<p class=\"line\">$1</p>");
-		story = story.replace(/([^\s]+)\s*\[([^\]]+)\]/g,"$1<sup data-word=\"$1\" data-alt=\"$2\">*</sup>");
+		story = story.replace(/([^\s]+)\s*\[([^\]]+)\]/g,"$1<sup data-alt=\"$2\">*</sup>");
 		$("#text").html("<div class=\"chapter-div\">"+story+"</div>");
 		$(".chapter-div").first().remove();
 		var chapt = 0;
@@ -45,7 +45,7 @@ $(function(){
 			$('#a_chap').append('<option value="'+(chapt++)+'">'+$(this).attr('data-name')+'</option>');
 		});
 		$('sup').each(function(){
-			$(this).parent().after('<p class="line footnote"><sup>*</sup>'+$(this).attr('data-word')+' &ndash; '+$(this).attr('data-alt')+'</p>');
+			$(this).parent().after('<p class="line footnote"><sup>*</sup> '+$(this).attr('data-alt')+'</p>');
 		});
 		$('.line').addClass('hyphenate').attr('lang','pl');
 		$('#a_full').click(function(e){
