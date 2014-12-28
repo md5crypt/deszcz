@@ -8,6 +8,9 @@
 \usepackage{fancyhdr}
 \usepackage{titleref}
 \usepackage{geometry}
+\usepackage{perpage}
+
+\MakePerPage{footnote}
 
 \makeatletter
 \newcommand*{\currentname}{\TR@currentTitle}
@@ -29,7 +32,7 @@
 	\nullfont
 }[]
 
-\geometry{a5paper,left=18mm,right=12mm,top=18mm,bottom=8mm,}
+\geometry{a5paper,left=20mm,right=10mm,top=18mm,bottom=7mm}
 \setlength{\headheight}{15.2pt}
 \setlength{\headsep}{10pt}
 
@@ -57,3 +60,5 @@
 		\vspace*{2\baselineskip}
 		\vfill{\scshape Wrocław, 2014} \\[0.3\baselineskip]
 	\end{titlepage}
+	\thispagestyle{empty}
+	\cleardoublepage

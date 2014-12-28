@@ -1,0 +1,12 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+\usepackage{pdfpages}
+\usepackage{background}
+
+\SetBgScale{1}\SetBgAngle{0}\SetBgColor{black}
+\SetBgContents{\rule{\paperwidth}{.4pt}}
+\includepdfset{pages=-}
+
+\begin{document}
+    \includepdf[pages=-,nup=1x2,landscape,booklet]{deszcz.pdf}
+\end{document}

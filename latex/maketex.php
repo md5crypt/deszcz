@@ -5,8 +5,9 @@
 */
 
 define('TEX_HEAD',	'tex_head.tex');	//tex file header
+define('TEX_BOOK',	'booklet.tex');		//tex file with booklet output
 define('INPUT',		'../deszcz.html');	//file with input text
-define('OUTPUT',	'deszcz.tex');		//file with input text
+define('OUTPUT',	'deszcz.tex');		//output file
 define('TEX_CMD',	'pdflatex %s'); 	//command to excute
 
 $T=	[['[  ]+',' '],
@@ -31,4 +32,5 @@ foreach($T as $t)
 $tex = file_get_contents(TEX_HEAD).$data."\\end{document}\n";
 file_put_contents(OUTPUT,$tex);
 passthru(sprintf(TEX_CMD,OUTPUT));
+passthru(sprintf(TEX_CMD,TEX_BOOK));
 ?>
