@@ -27,16 +27,20 @@ $(function(){
 		for(var i=0; i<view.length; i++)
 			story += M[view[i]];
 		story = story.replace(/\"([^\"]+)\"/g," <span class=\"quote\">&bdquo;$1&ldquo;</span>");
-		story = story.replace(/\n+/g,"\n");
-		story = story.replace(/ - /g," &ndash; ");
-		story = story.replace(/\n-/g,"\n&mdash;");
+		story = story.replace(/[\n\r]+/g,"\n");
+		story = story.replace(/[*]{3}(\s+[^-])/g,"<p class=\"section noindent\"></p>$1");
 		story = story.replace(/[*]{3}/g,"<p class=\"section\"></p>");
+		story = story.replace(/!chapter\s+(.+)(\n\s*[^-])/g,"</div><div class=\"chapter-div\"><p class=\"chapter noindent\" data-name=\"$1\" ></p>$2");
 		story = story.replace(/!chapter\s+(.+)/g,"</div><div class=\"chapter-div\"><p class=\"chapter\" data-name=\"$1\" ></p>");
+		story = story.replace(/ - /g," &ndash; ");
+		story = story.replace(/\n-/g,"\n&mdash;");	
 		story = story.replace(/!line/g,"<br/>");
 		story = story.replace(/\n([^<].+)/g,"<p class=\"line\">$1</p>");
 		story = story.replace(/([^\s]+)\s*\[([^\]]+)\]/g,"$1<sup data-alt=\"$2\">*</sup>");
+		story = story.replace(/(\s)([zZWwiaoO]) /g,"$1$2&nbsp;");
 		$("#text").html("<div class=\"chapter-div\">"+story+"</div>");
 		$(".chapter-div").first().remove();
+		$(".noindent").next().css('text-indent','0px');
 		var chapt = 0;
 		$('#a_chap').html('');
 		$('.chapter').each(function(){

@@ -22,6 +22,8 @@ $T=	[['[  ]+',' '],
 	["\n-","\n---"],
 	['[*]{3}','\makespacer'],
 	["!chapter\s+([^\n]+)",'\chapter{\1}'],
+	["(\\\\makespacer\n+)([^-])",'\1\noindent \2'],
+	["(\\\\chapter[^\n]+\n+)---",'\1\indent\indent ---'],
 	['([^\s])\s*\[([^\]]+)\]','\1\footnote{\2}'],
 	["\n","\n\n"],
 	["(\s)([zZWwiaoO])(\s)",'\1\2~']];
