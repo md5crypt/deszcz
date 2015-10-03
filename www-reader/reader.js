@@ -1,6 +1,30 @@
 /*!
+The MIT License (MIT)
+
+Copyright (c) 2015 Marek Korzeniowski
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+/*
 	my awesome JS book reader
-	tottaly didn't steal most of the ideas from hpmor.com
+	tottaly didn't steal most of the ideas from hpmor.com *sorry for that guys*
 */
 
 var config = {fontsize:16, chapter:0, position:0, invert:false, viewFull:false};
@@ -26,6 +50,7 @@ $(function(){
 		var view = new Uint8Array(buffer);
 		for(var i=0; i<view.length; i++)
 			story += M[view[i]];
+		$('#footer').html(story.match(/!license ([^\n]+)/)[1]);
 		story = story.replace(/\"([^\"]+)\"/g," <span class=\"quote\">&bdquo;$1&ldquo;</span>");
 		story = story.replace(/[\n\r]+/g,"\n");
 		story = story.replace(/[*]{3}(\s+[^-])/g,"<p class=\"section noindent\"></p>$1");
@@ -70,18 +95,21 @@ $(function(){
 			e.preventDefault();
 			config.fontsize *= 1.25;
 			$('body').css('font-size',config.fontsize+'px');
+			$('#footer').css('font-size',(config.fontsize*0.625)+'px');
 			$.cookie('reader-config',config);
 		});
 		$('#a_less').click(function(e){
 			e.preventDefault();
 			config.fontsize *= 0.75;
 			$('body').css('font-size',config.fontsize+'px');
+			$('#footer').css('font-size',(config.fontsize*0.625)+'px');
 			$.cookie('reader-config',config);
 		});
 		$('#a_norm').click(function(e){
 			e.preventDefault();
 			config.fontsize = 16;
 			$('body').css('font-size',config.fontsize+'px');
+			$('#footer').css('font-size',(config.fontsize*0.625)+'px');
 			$.cookie('reader-config',config);
 		});
 		$('.next-chapter').click(function(e){
