@@ -16,19 +16,17 @@
 \newcommand*{\currentname}{\TR@currentTitle}
 \newcommand*{\makespacer}{
 	\vspace{3mm}
-	\centerline{
-		\includegraphics[width=0.2\textwidth]{para.pdf}
-	}
+	\pagebreak[3]
+	\centerline{$\ast \  \ast \  \ast$}
+	\nopagebreak[4]
 	\vspace{3mm}
 }
 \makeatother
 
 \titleformat{\chapter}[block]{}{}{0.0ex}{
 	\centering
-	\includegraphics[width=0.2\textwidth]{chaptR.pdf} %I don't remember where I found those graphics, so sorry whoever drew that.
 	\bfseries\Huge\itshape
 	\raisebox{10mm}{\currentname}
-	\includegraphics[width=0.2\textwidth]{chaptL.pdf}
 	\nullfont
 }[]
 

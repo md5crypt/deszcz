@@ -53,15 +53,15 @@ $(function(){
 		$('#footer').html(story.match(/!license ([^\n]+)/)[1]);
 		story = story.replace(/\"([^\"]+)\"/g," <span class=\"quote\">&bdquo;$1&ldquo;</span>");
 		story = story.replace(/[\n\r]+/g,"\n");
-		story = story.replace(/[*]{3}(\s+[^-])/g,"<p class=\"section noindent\"></p>$1");
-		story = story.replace(/[*]{3}/g,"<p class=\"section\"></p>");
+		story = story.replace(/[*]{3}(\s+[^-])/g,"<p class=\"section noindent\">&lowast;&nbsp;&lowast;&nbsp;&lowast;</p>$1");
+		story = story.replace(/[*]{3}/g,"<p class=\"section\">&lowast;&nbsp;&lowast;&nbsp;&lowast;</p>");
 		story = story.replace(/!chapter\s+(.+)(\n\s*[^-])/g,"</div><div class=\"chapter-div\"><p class=\"chapter noindent\" data-name=\"$1\" ></p>$2");
 		story = story.replace(/!chapter\s+(.+)/g,"</div><div class=\"chapter-div\"><p class=\"chapter\" data-name=\"$1\" ></p>");
 		story = story.replace(/ - /g," &ndash; ");
 		story = story.replace(/\n-/g,"\n&mdash;");	
 		story = story.replace(/!line/g,"<br/>");
 		story = story.replace(/\n([^<].+)/g,"<p class=\"line\">$1</p>");
-		story = story.replace(/([^\s]+)\s*\[([^\]]+)\]/g,"$1<sup data-alt=\"$2\">*</sup>");
+		story = story.replace(/([^\s]+)\s*\[([^\]]+)\]/g,'$1 <span class="line footnote">[$2]</span>');
 		story = story.replace(/(\s)([zZWwiaoO]) /g,"$1$2&nbsp;");
 		$("#text").html("<div class=\"chapter-div\">"+story+"</div>");
 		$(".chapter-div").first().remove();
@@ -70,11 +70,11 @@ $(function(){
 		$('#a_chap').html('');
 		$('.chapter').each(function(){
 			$(this).parent().attr('id','chapt_'+chapt).append('<a class="next-chapter title="Next chapter" href="">&gt&gt&gt&gt</a>');
-			$(this).html('<img src="assets/chaptR.svg"/><span>'+$(this).attr('data-name')+'</span><img src="assets/chaptL.svg"/>');
+			$(this).html(/*'<img src="assets/chaptR.svg"/>*/'<span>'+$(this).attr('data-name')+'</span>'/*<img src="assets/chaptL.svg"/>'*/);
 			$('#a_chap').append('<option value="'+(chapt++)+'">'+$(this).attr('data-name')+'</option>');
 		});
 		$('sup').each(function(){
-			$(this).parent().after('<p class="line footnote"><sup>*</sup> '+$(this).attr('data-alt')+'</p>');
+			$(this).parent().after('<p class="line footnote"> ['+$(this).attr('data-alt')+']</p>');
 		});
 		$('.line').addClass('hyphenate').attr('lang','pl');
 		$('#a_full').click(function(e){
