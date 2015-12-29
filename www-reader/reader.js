@@ -29,7 +29,9 @@ SOFTWARE.
 
 var config = {fontsize:16, chapter:0, position:0, invert:false, viewFull:false};
 $(function(){
-	$.ajax({url:"../deszcz.html",dataType: "binary", processData: false, responseType:"arraybuffer"}).done(function(buffer){
+	var loaded = 0;
+	$('#ldr').html("Fetching content... "+loaded+"/"+chapter_count);
+	load_files(function(story){
 		$('#ldr').html('Transcodeing content...');
 		$.cookie.json = true;
 		$.cookie.defaults.expires = 365;
@@ -37,45 +39,17 @@ $(function(){
 		if(typeof config_tmp == "object" && Object.keys(config_tmp).length == 5){
 			config = config_tmp;
 		}
-		var M0 = "ĘÓĄŚŁŻŹĆŃęóąśłżźćń-- \"\"".split("");
-		var M1 = [0xCA,0xD3,0xA5,0x8C,0xA3,0xAF,0x8F,0xC6,0xD1,0xEA,0xF3,0xB9,0x9C,0xB3,0xBF,0x9F,0xE6,0xF1,0x96,0x97,0xA0,0x84,0x94]; //Windows-1250 charset
-		var M = [];
-		for(var i=0; i<128; i++)
-			M[i] = String.fromCharCode(i);
-		for(var i=128; i<256; i++)
-			M[i] = ' ';
-		for(var k in M1)
-			M[M1[k]] = M0[k];
-		story = '';
-		var view = new Uint8Array(buffer);
-		for(var i=0; i<view.length; i++)
-			story += M[view[i]];
-		$('#footer').html(story.match(/!license ([^\n]+)/)[1]);
-		story = story.replace(/\"([^\"]+)\"/g," <span class=\"quote\">&bdquo;$1&ldquo;</span>");
-		story = story.replace(/[\n\r]+/g,"\n");
-		story = story.replace(/[*]{3}(\s+[^-])/g,"<p class=\"section noindent\">&lowast;&nbsp;&lowast;&nbsp;&lowast;</p>$1");
-		story = story.replace(/[*]{3}/g,"<p class=\"section\">&lowast;&nbsp;&lowast;&nbsp;&lowast;</p>");
-		story = story.replace(/!chapter\s+(.+)(\n\s*[^-])/g,"</div><div class=\"chapter-div\"><p class=\"chapter noindent\" data-name=\"$1\" ></p>$2");
-		story = story.replace(/!chapter\s+(.+)/g,"</div><div class=\"chapter-div\"><p class=\"chapter\" data-name=\"$1\" ></p>");
-		story = story.replace(/ - /g," &ndash; ");
-		story = story.replace(/\n-/g,"\n&mdash;");	
-		story = story.replace(/!line/g,"<br/>");
-		story = story.replace(/\n([^<].+)/g,"<p class=\"line\">$1</p>");
-		story = story.replace(/([^\s]+)\s*\[([^\]]+)\]/g,'$1 <span class="line footnote">[$2]</span>');
-		story = story.replace(/(\s)([zZWwiaoO]) /g,"$1$2&nbsp;");
-		$("#text").html("<div class=\"chapter-div\">"+story+"</div>");
-		$(".chapter-div").first().remove();
-		$(".noindent").next().css('text-indent','0px');
+		o = text2html(story);
+		$("#footer").html(o.license);
+		$("#text").html(o.data);
 		var chapt = 0;
 		$('#a_chap').html('');
 		$('.chapter').each(function(){
 			$(this).parent().attr('id','chapt_'+chapt).append('<a class="next-chapter title="Next chapter" href="">&gt&gt&gt&gt</a>');
-			$(this).html(/*'<img src="assets/chaptR.svg"/>*/'<span>'+$(this).attr('data-name')+'</span>'/*<img src="assets/chaptL.svg"/>'*/);
+			$(this).html('<span>'+$(this).attr('data-name')+'</span>');
 			$('#a_chap').append('<option value="'+(chapt++)+'">'+$(this).attr('data-name')+'</option>');
 		});
-		$('sup').each(function(){
-			$(this).parent().after('<p class="line footnote"> ['+$(this).attr('data-alt')+']</p>');
-		});
+
 		$('.line').addClass('hyphenate').attr('lang','pl');
 		$('#a_full').click(function(e){
 			e.preventDefault();
@@ -124,22 +98,10 @@ $(function(){
 				$('body').css('background-color','#3F3F3F').css('color','#DCDCCC');
 				$('#a_invr').css('color','#222000').css('background-color','#F0F0F0');
 				$('#banner').css('border-bottom-color','#DCDCCC');
-				$('.chapter img, .section img').each(function(){
-					$(this).attr('src',$(this).attr('src').replace('.svg','i.svg'));
-				});
-				$('.section').each(function(){
-					$(this).css('background-image',$(this).css('background-image').replace('.svg','i.svg'));
-				});
 			}else{
 				$('body').css('background-color','#F0F0F0').css('color','#222000');
 				$('#a_invr').css('color','#DCDCCC').css('background-color','#3F3F3F');
 				$('#banner').css('border-bottom-color','#222000');
-				$('.chapter img').each(function(){
-					$(this).attr('src',$(this).attr('src').replace('i.svg','.svg'));
-				});
-				$('.section').each(function(){
-					$(this).css('background-image',$(this).css('background-image').replace('i.svg','.svg'));
-				});
 			}
 			$.cookie('reader-config',config);
 		});
@@ -170,7 +132,9 @@ $(function(){
 		$('#a_invr').click();
 		
 		Hyphenator.run();
-	}).fail(function(){
+	},function(){
 		$('#ldr').html('Fetching failed. Script terminated.');
+	},function(){
+		$('#ldr').html("Fetching content... "+(++loaded)+"/"+chapter_count);
 	});
 });

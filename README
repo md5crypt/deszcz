@@ -1,4 +1,12 @@
-Hello there! You can read the story here: https://rawgit.com/md5crypt/deszcz/master/www-reader/index.html
+Hello there! You can read the story online here: https://rawgit.com/md5crypt/deszcz/master/www-reader/index.html
+You can also get it in epub format here:
+https://rawgit.com/md5crypt/deszcz/master/www-reader/epub.html
+Or in a neat PDF version here:
+https://github.com/md5crypt/deszcz/raw/master/latex-output/deszcz.pdf
+
+*Dec 29, 2015*
+- splitted story content into multiple files. LanguageTool got to laggy when rechecking many kilobytes of text
+- new epub generator written in pure JS
 
 *Dec 23, 2014*
 new JS-heavy web reader
@@ -17,7 +25,7 @@ The story content is inside deszcz.html. It's a plain text file, named html to m
 also added latex output generator, but who would care for a latex template for polish-formatted novels... the output looks pretty much like the www-version, A5-booklet
 
 *Feb 25, 2014*
-added epub format generator! http://io.badgerland.eu/epub/
+added epub format generator!
 
 if u somehow read it, remember to leave some feedback. Do it by reporting some issues, technically we can call them bugs in the linguistics.
 

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="assets/jquery.binarytransport.min.js"></script>
+	<script src="assets/jszip.min.js"></script>
+	<script src="assets/FileSaver.min.js"></script>
+	<script src="textconv.js"></script>
+</head>
+<body>
+<script>
+var static_files = {
+	'mimetype':'application/epub+zip',
+	'stylesheet.css':
+
+	'body{font-family:Georgia,serif;font-size:1em;}\
+	.quote{font-style:italic;}\
+	.footnote{font-size:0.75em;color: gray;}\
+	.section{text-align:center;line-height:1em;}\
+	.line{text-indent:1.5em;margin:0px;}\
+	.chapter{margin-top:4em;text-align:center;margin-bottom:2em;text-transform:uppercase;font-weight:bold;font-size:1.8em;}',
+
+	'META-INF/container.xml':
+
+	'<?xml version="1.0"?><container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles><rootfile full-path="content.opf" media-type="application/oebps-package+xml"/></rootfiles></container>'
+};
+
+function content_opf(data){
+	var a = '';
+	var b = '';
+	for(i=0; i<data.length; i++){
+		a += '<item href="part'+i+'.html" id="part'+i+'" media-type="application/xhtml+xml"/>';
+		b += '<itemref idref="part'+i+'"/>';
+	}
+	return '<?xml version="1.0" encoding="utf-8"?><package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0"><metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:language>pl</dc:language><dc:creator>Marek Korzeniowski</dc:creator><dc:title>Deszcz</dc:title><dc:identifier id="uuid_id" opf:scheme="uuid">some-random-string</dc:identifier></metadata><manifest>'+a+'<item href="stylesheet.css" id="css" media-type="text/css"/><item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/></manifest><spine toc="ncx">'+b+'</spine><guide/></package>';
+}
+
+function toc_ncx(data){
+	var i = 0;
+	var a = '';
+	data.find('.chapter').each(function(){
+		a += '<navPoint id="part'+i+'_nav" playOrder="'+(i+1)+'"><navLabel><text>'+$(this).attr('data-name')+'</text></navLabel><content src="part'+i+'.html"/></navPoint>';
+		i++;
+	});
+	return '<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en-US"><head><meta name="dtb:uid" content="some-random-string"/><meta name="dtb:depth" content="1" /><meta name="dtb:totalPageCount" content="0" /><meta name="dtb:maxPageNumber" content="0" /></head><docTitle><text>Deszcz</text></docTitle><navMap>'+a+'</navMap></ncx>';
+}
+
+$(function(){
+	var loaded = 0;
+	$('#box').html("loading files... "+loaded+"/"+chapter_count);
+	load_files(function(story){
+		$('#box').html("loading files... done\ngenerating xml files...");
+		o = text2html(story);
+		var zip = new JSZip();
+		zip.file('toc.ncx',toc_ncx(o.data));
+		zip.file('content.opf',content_opf(o.data));
+		$('#box').append(" done\n");
+		for(var k in static_files)
+			zip.file(k, static_files[k]);
+		var i = 0;
+		o.data.find('.chapter').each(function(){
+			$('#box').append("adding chapter "+$(this).attr('data-name')+"...");
+			$(this).html($(this).attr('data-name'));
+			zip.file('part'+(i++)+'.html','<!DOCTYPE HTML><html><head><meta charset="utf-8" /><link rel="stylesheet" type="text/css" href="stylesheet.css" /></head><body>'+$(this).parent().html()+'</body></html>');
+			$('#box').append(" done\n");
+		});
+		$('#box').append("saving archive...");
+		var content = zip.generate({type:"blob"});
+		saveAs(content, "deszcz.epub");
+		$('#box').append(" done\n");
+	},function(){
+		$('#box').html("loading files... failed");
+	},
+	function(){
+		$('#box').html("loading files... "+(++loaded)+"/"+chapter_count);
+	});
+});
+</script>
+<pre>JS EPUB GEN</pre>
+<pre id="box">this script requiers a sane browser (for IE that's IE 10+)</pre>
+</pre>
+</body>
+</html>
